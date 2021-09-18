@@ -10,17 +10,16 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:plugin.helloWorld"
+		"onCommand:firstExt.hello"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "plugin.helloWorld",
+				"command": "firstExt.hello",
 				"title": "Hello World"
 			}
 		],
-		// 快捷键绑定，分为mac和win操作系统；when是触发的先决条件，可不配；
 		"keybindings": [
 			{
 				"command": "firstExt.hello",
@@ -29,22 +28,14 @@
 				"when": "editorTextFocus"
 			}
 		],
-		// 菜单
 		"menus": {
-			// 编辑器鼠标右键菜单
 			"editor/context": [],
-			// 编辑器右上角图标，不配置图片就显示文字
 			"editor/title": [],
-			// 编辑器标题右键菜单
 			"editor/title/context": [],
-			// 资源管理器右键菜单
 			"explorer/context": []
 		},
-		// 自定义新的activitybar图标，也就是最左侧 图标栏
 		"viewsContainers": {},
-		// 自定义左侧侧边栏内view树的实现
 		"views": {},
-			// 插件自定义设置项，由用户配置后传参进入代码逻辑里，暂不展示
 		"configuration": {}
 	},
 	"scripts": {
